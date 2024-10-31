@@ -1,23 +1,24 @@
-// Lab 7 - Functions
+// Lab 8 - Anon Functions and Callbacks
 // Author: Hailey Kafer
 // Date: October 22, 2024
 
-function sortUserName () {
-  var userName = window.prompt("Hello, what is your name?");
-  console.log("userName =", userName);
+array = [1, 2, 3, 4, 5, 6]
+console.log("First Array", array);
 
-  var nameArray = userName.split('');
-  console.log("userName =", userName);
-  
-  var nameArraySort = nameArray.sort();
-  console.log("nameArraySort =", nameArraySort);
-
-  var nameSorted = nameArraySort.join('');
-  console.log("nameSorted =", nameSorted);
-
-  return nameSorted;
+// Adds five
+function addFive(x) {
+return (x + 5);
 }
 
-//output
-document.writeln("I fixed your name: ", 
-    sortUserName(), "</br>");
+// Tests function
+var secondArray = array.map(addFive);
+console.log("Second array", secondArray);
+
+// Multiplies by five
+function multiplyFive(x) {
+return (x * 5);
+}
+
+// Tests function
+var thirdArray = array.map(multiplyFive)
+console.log("Third array", thirdArray );
