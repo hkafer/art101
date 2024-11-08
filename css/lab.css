@@ -36,8 +36,9 @@ margin-left: 10px;
 background-color:rgb(7, 144, 144)
 }
 
-img{
-  border: dotted 4px rgb(71, 10, 71);
-  float: right;
-  margin-left: 10px;
+.special {
+  background-color: rgb(184, 184, 228);
+  border: dotted 50px rgb(38, 13, 32);
+  color: pink;
+  font-weight: bold;
 }

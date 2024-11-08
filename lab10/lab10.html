@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 10: Javascript for the Web - Libraries & jQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/lab.css">
+    <script src="js/lab10.js" DEFER></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+	<div id="challenge" class="minor-section">
+  <h2>Challenge</h2>
+  <p>The challenge of this lab was to experiment with jQuery and event listeners to make a cohesive website.</p>
+</div>
+
+<div id="problems" class="minor-section">
+  <h2>Problems</h2>
+  <p>I ran into a few problems with my event listeners but I was able to solve the issue using WesBot</p>
+</div>
+
+<div id="results" class="minor-section">
+  <h2>Results</h2>
+      <p>Click the buttons to see!</p>'
+		<nav id="links">
+		<div id="output"></div>
+		<button id="make-convo">Say Something!</button>
+</div>
+<script>
+function generateRandomText(){
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt";
+    const min = 3; 
+    const max = 100;
+    const randLen = Math.floor(Math.random() * (max - min +1)) + min;
+    // Get a random starting index to slice the Lorem ipsum text
+    const randStart = Math.floor(Math.random() * (text.length - randLen +1));
+    // Generate the random Lorem ipsum-like text
+    return text.slice(randStart, randStart + randLen);
+}
+
+// Click listener for button
+$("#make-convo").click(function(){
+
+    //get new fake dialogue
+    const newText = generateRandomText();
+    
+    //append a new div to our output div
+    $('#output').append('<div class="text"><p>' + newText + '</p></div>');
+}); 
+</script>	
+	</div>
+</main>
+</body>
+</html>
